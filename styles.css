@@ -10,12 +10,18 @@ html {
 }
 
 :root {
+    /*Colours*/
     --Purple-100: hsl(254, 88%, 90%);
     --Purple-500: hsl(256, 67%, 59%);   
     --Yellow-100: hsl(31, 66%, 93%);
     --Yellow-500: hsl(39, 100%, 71%);
     --White: hsl(0, 0%, 100%);
     --Black: hsl(0, 0%, 7%);
+    /*Sizes*/
+    --large: clamp(2rem, 5vw, 3.5rem);
+    --big: clamp(1rem, 2.5vw, 2.6rem);
+    --medium: clamp(1rem, 2.4vw, 2rem);
+    --small: clamp(1rem, 1.6vw, 1.3rem);   
 }
 
 body {
@@ -46,7 +52,7 @@ body {
 }
 
 .one .one__first-paragraph {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: var(--large);
     font-weight: 500;
     text-align: center;
     color: white;
@@ -91,7 +97,7 @@ body {
 }
 
 .two p {
-    font-size: clamp(1rem, 2.4vw, 2rem);
+    font-size: var(--medium);
     font-weight: 600;
     letter-spacing: -1px;
     margin-left: 15px;
@@ -115,7 +121,7 @@ body {
 }
 
 .three p {
-    font-size: clamp(1rem, 2.4vw, 2rem);
+    font-size: var(--medium);
     font-weight: 600;
     line-height: 18px;
     letter-spacing: -1px;
@@ -146,7 +152,7 @@ body {
 }
 
 .four .four__first-paragraph {
-    font-size: clamp(1rem, 2.4vw, 2rem);
+    font-size: var(--medium);
     font-weight: 600;
     line-height: 18px;
     letter-spacing: -1px;
@@ -154,7 +160,7 @@ body {
 }
 
 .four .four__second-paragraph {
-    font-size: clamp(1rem, 1.6vw, 1.3rem);
+    font-size: var(--small);
     padding: 0px 20px 0px 20px;
 }
 
@@ -175,7 +181,7 @@ body {
 }
 
 .five p {
-    font-size: clamp(1rem, 2.5vw, 2.6rem);
+    font-size: var(--big);
     line-height: 25px;
     color: var(--White);
 }
@@ -199,7 +205,7 @@ body {
 }
 
 .six div .faster-audience {
-    font-size: clamp(1rem, 1.6vw, 1.3rem);
+    font-size: var(--small);
 }
 
 .six img {
@@ -220,7 +226,7 @@ body {
 }
 
 .seven p {
-    font-size: clamp(1rem, 2.5vw, 2.6rem);
+    font-size: var(--big);
     font-weight: 500;
     letter-spacing: clamp(-1px, -1px, -2px);
     line-height: clamp(20px, 22px, 24px);
@@ -249,7 +255,7 @@ body {
 }
 
 .eight p {
-    font-size: clamp(1rem, 2.5vw, 2.6rem);
+    font-size: var(--big);
     font-weight: 500;
     letter-spacing: clamp(-1px, -1px, -2px);
     line-height: clamp(20px, 22px, 24px);
