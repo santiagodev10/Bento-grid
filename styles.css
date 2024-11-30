@@ -1,5 +1,4 @@
 html {
-    box-sizing: border-box;
     font-family: "DM Sans", sans-serif;
 }
 
@@ -7,6 +6,7 @@ html {
     font-size: 62.5%;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -31,9 +31,9 @@ body {
     padding: 30px 10px;
 }
 
-/*FISTS CONTAINER*/
+/*1ST CONTAINER*/
 
-#one {
+.one {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,9 +42,10 @@ body {
     grid-row: 1/6;
     background-color: var(--Purple-500);
     gap: 10px;
+    padding: 10px;
 }
 
-#one .first-paragraph {
+.one .one__first-paragraph {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 500;
     text-align: center;
@@ -53,29 +54,29 @@ body {
     line-height: 35px;
 }
 
-.first-paragraph .number {
+.one__first-paragraph .number {
     font-size: inherit;
     font-family: inherit;
     color: var(--Yellow-500);
 }
 
-.first-paragraph .faster {
+.one__first-paragraph .faster {
     font-size: inherit;
     font-style: italic;
 }
 
-#one .five-star-image {
+.one .five-star-image {
     width: 30%;
 }
 
-#one .second-paragraph {
+.one .one__second-paragraph {
     font-weight: 200;
     color: white;
 }
 
-/*SECOND CONTAINER*/
+/*2ND CONTAINER*/
 
-#two {
+.two {
     grid-column: 3/6;
     grid-row: 6/11;
     background-color: var(--White);
@@ -84,61 +85,144 @@ body {
     padding: 15px 0px;
 }
 
-#two img {
+.two img {
     width: 200px;
     margin-left: 14px;
 }
 
-#two p {
+.two p {
     font-size: clamp(1rem, 2.4vw, 2rem);
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: -1px;
     margin-left: 15px;
     padding: 0px 25px 0px 0px;
     line-height: 18px;
 }
 
-#three {
+/*3RD CONTAINER*/
+
+.three {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     grid-column: 6/9;
     grid-row: 6/11;
-    background-color: violet;
+    background-color: var(--Yellow-500);
+    overflow: hidden;
+    gap: 10px;
 }
 
-#four {
+.three p {
+    font-size: clamp(1rem, 2.4vw, 2rem);
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: -1px;
+    text-align: left;
+    padding: 50px 40px 0px 15px;
+}
+
+.three img {
+    width: 80%;
+}
+
+/*4TH CONTAINER*/
+
+.four {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     grid-column: 9/11;
     grid-row: 1/11;
-    background-color: chocolate;
+    background-color: var(--Purple-100);
+    overflow: hidden;
+    gap: 10px;
 }
 
-#five {
+.four img {
+    width: clamp(100px, 26vw, 220px);
+    margin-left: 20px;
+}
+
+.four .four__first-paragraph {
+    font-size: clamp(1rem, 2.4vw, 2rem);
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: -1px;
+    padding: 0px 20px 0px 20px;
+}
+
+.four .four__second-paragraph {
+    font-size: clamp(1rem, 1.6vw, 1.3rem);
+    padding: 0px 20px 0px 20px;
+}
+
+/*5TH CONTAINER*/
+
+.five {
+    display: flex;
+    align-items: center;
     grid-column: 6/11;
     grid-row: 11/16;
-    background-color: gold;
+    padding: 15px;
+    gap: 10px;
+    background-color: var(--Purple-500);
 }
 
-#six {
+.five img {
+    width: 140px;
+}
+
+.five p {
+    font-size: clamp(1rem, 2.5vw, 2.6rem);
+    line-height: 25px;
+    color: var(--White);
+}
+
+/*6TH CONTAINER*/
+
+.six {
+    display: flex;
+    flex-direction: column;
     grid-column: 3/6;
     grid-row: 11/16;
-    background-color: pink;
+    box-shadow: 0px 0px 10px lightgray;
+    background-color: var(--White);
+    padding: 10px 10px 0px 10px;
+    gap: 15px;
 }
 
-#seven {
+.six div .percentage {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.six div .faster-audience {
+    font-size: clamp(1rem, 1.6vw, 1.3rem);
+}
+
+.six img {
+    width: 80%;
+}
+
+.seven {
     grid-column: 1/3;
     grid-row: 1/8;
     background-color: darkblue;
 }
 
-#eight {
+.eight {
     grid-column: 1/3;
     grid-row: 8/16;
     background-color: turquoise;
 }
 
-div {
+/* div {
     width: 100%;
     font-size: 2rem;
     border-radius: 10px;
-}
+} */
 
 @media(max-width: 600px) {
     .wrapper {
@@ -147,42 +231,42 @@ div {
         padding: 20px;
     }
 
-    #one {
+    .one {
         grid-column: 1/3;
         grid-row: 1;
     }
 
-    #two {
+    .two {
         grid-column: 1/3;
         grid-row: 2;
     }
 
-    #three {
+    .three {
         grid-column: 1/3;
         grid-row: 3;
     }
 
-    #four {
+    .four {
         grid-column: 1/3;
         grid-row: 4;
     }
 
-    #five {
+    .five {
         grid-column: 1/3;
         grid-row: 5;
     }
 
-    #six {
+    .six {
         grid-column: 1/3;
         grid-row: 6;
     }
 
-    #seven {
+    .seven {
         grid-column: 1/3;
         grid-row: 7;
     }
 
-    #eight {
+    .eight {
         grid-column: 1/3;
         grid-row: 8;
     }
